@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace Code.UI
 {
@@ -24,6 +25,10 @@ namespace Code.UI
 
         public void CreateButtonArray( /*skills would go here*/ int count)
         {
+            var newDictionary = new Dictionary<string, bool>();
+            newDictionary["firstString"] = false;
+            newDictionary["secondString"] = false;
+            bool test = newDictionary["firstString"] && newDictionary["secondString"];
             _buttons = new GameObject[count];
             for (int i = 0; i < _buttons.Length; i++)
             {
